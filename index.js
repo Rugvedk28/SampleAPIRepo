@@ -7,6 +7,13 @@ app.get("/api/users", function(req, res){
     return res.json(users);
 })
 
+//This is an alternative approach of defining routes
+app.route("/api/users/:id")
+.get("", function(req, res){})
+.put("", function(req, res){})
+.delete("", function(req, res){})
+
+
 app.get("/users", function(req, res){
     const HTML=`
     <ul>
